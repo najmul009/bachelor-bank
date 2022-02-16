@@ -4,7 +4,10 @@ function getInputValue(field){
     const getValue = parseFloat(strValue.value)
     return getValue;
 }
-
+function inputError(error){
+        const Warning = document.getElementById('Warning')
+        Warning.style.display = error
+}
 
 
 //event handaler
@@ -14,7 +17,8 @@ document.getElementById('claculate-btn').addEventListener('click',function(){
     const rent = getInputValue('rent-input')
     const cloths = getInputValue('clothes-input')
 
-    let totalExpenses = food + rent + cloths;
+    if(income > 0 && food > 0 && rent >0 && cloths > 0){
+        let totalExpenses = food + rent + cloths;
     let balance = income - totalExpenses
 
     const totalExpensesText = document.getElementById('total-expenses')
@@ -23,4 +27,30 @@ document.getElementById('claculate-btn').addEventListener('click',function(){
     totalExpensesText.innerText = totalExpenses;
     balanceText.innerText = balance
 
+    inputError('none')
+
+    }
+    else{
+        inputError('block')
+    }
+
+})
+
+
+document.getElementById('saving-btn').addEventListener('click',function(){
+    const savePersent = getInputValue('saving-input')
+    const income = getInputValue('income-input')
+    
+    if(savePersent > 0 && income > 0){
+        let saving = (income * savePersent) /100
+    let remainingBlacne = income - saving;
+    const savingAmount = document.getElementById('saving-amount')
+    const remainingBlacneNew = document.getElementById('remaining-balance')
+    savingAmount.innerText = saving
+    remainingBlacneNew.innerText = remainingBlacne
+    inputError('none')
+    }
+    else{
+        inputError('block')
+    }
 })
