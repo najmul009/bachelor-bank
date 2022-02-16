@@ -33,13 +33,61 @@
                         <!-- income section  -->
                         <div class="income-section">
                             <h3 class="text-center my-4">Income</h3>
-                            <p class="d-flex justify-content-center">
-                                <span class="fs-5">Income: </span> <input class="border-0 field-color rounded ms-3 ps-2"
-                                    type="number" name="">
-                            </p>
+                            <div class="row">
+                                <div class="col-4 d-flex justify-content-end">
+                                    <span class="fs-5 ">Income: </span>
+                                </div>
+                                <div class="col-8 d-flex justify-content-start ">
+                                    <input id="income-input" class="border-0 field-color rounded ps-2" type="number" name="">
+                                </div>
+                            </div>
                         </div>
                         <!-- expenses section -->
+                        <div class="income-section">
+                            <h3 class="text-center my-4">Expenses</h3>
+                            <div class="row my-4">
+                                <div class="col-4 d-flex justify-content-end">
+                                    <span class="fs-5 ">Food: </span>
+                                </div>
+                                <div class="col-8 d-flex justify-content-start ">
+                                    <input id="food-input" class="border-0 field-color rounded ps-2" type="number" name="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 d-flex justify-content-end">
+                                    <span class="fs-5 ">Rent: </span>
+                                </div>
+                                <div class="col-8 d-flex justify-content-start ">
+                                    <input id="rent-input" class="border-0 field-color rounded ps-2" type="number" name="">
+                                </div>
+                            </div>
+                            <div class="row my-4">
+                                <div class="col-4 d-flex justify-content-end">
+                                    <span class="fs-5 ">Clothes: </span>
+                                </div>
+                                <div class="col-8 d-flex justify-content-start ">
+                                    <input id="clothes-input" class="border-0 field-color rounded ps-2" type="number" name="">
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- Calculet Section  -->
+                        <div class="celculate-section d-flex justify-content-center align-content-center   flex-column">
+                            <button id="claculate-btn" class="btn btn-primary btn-lg px-5 mx-auto">Calculate</button>
+                            <h4 class="text-center my-4">Total Expenses:<span id="total-expenses">00</span></h4>
+                            <h4 class="text-center ">Balance:<span id="balance">00</span></h4>
+
+                            <!-- claculate saving  -->
+                            <div class="d-flex  align-content-center px-4 my-4">
+                                <span class="fs-5 ms-5">Save:</span>
+                                <input id="saving-input" class="border-0 field-color rounded ps-3 seving-input ms-2" type="number" name="">
+                                <span class="fs-5 ms-3">%</span>
+                                <button id="calculate-saving-btn" class="btn btn-primary btn-lg px-4 py-1 ms-3 ">Save</button>
+                            </div>
+
+                            <h4 class="text-center my-3">Saving Amount:<span id="saving-amount">00</span></h4>
+                            <h4 class="text-center ">Remaining Balance:<span id="remaining-balance">00</span></h4>
+                        </div>
 
                     </div>
                 </div>
