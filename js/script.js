@@ -77,3 +77,16 @@ document.getElementById('saving-btn').addEventListener('click', function () {
         balanceError('none')
     }
 })
+
+//event handelar on close btn
+document.getElementById('closeWarning').addEventListener('click',function(){
+    inputError('none')
+    
+    
+    
+})
+document.getElementById('closeWarning-2').addEventListener('click',function(){
+    balanceError('none')
+    
+    
+})

@@ -9,4 +9,9 @@
 }
 .Warning{
     display: none;
+    position: relative;
+}
+#closeWarning, #closeWarning-2{
+    position: absolute;
+    right: 10px;
 }
