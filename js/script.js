@@ -57,7 +57,7 @@ document.getElementById('saving-btn').addEventListener('click', function () {
     const income = getInputValue('income-input')
 
     //saving % input error check 
-    if (savePersent > 0 && savePersent <= 100 && income > 0) {
+    if (savePersent >= 0 && savePersent <= 100 && income > 0) {
         let saving = (income * savePersent) / 100
         let remainingBlacne = getBalance - saving;
         const savingAmount = document.getElementById('saving-amount')
